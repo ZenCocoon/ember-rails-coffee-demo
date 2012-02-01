@@ -1,0 +1,10 @@
+{{#with post}}
+  {{view Ember.TextField valueBinding="title" placeholder="Title"}}
+  {{view Ember.TextField valueBinding="body" placeholder="Body"}}
+  {{#if id}}
+    {{submitButton "Update"}}
+  {{else}}
+    {{submitButton "Create"}}
+  {{/if}}
+  <a href="#" {{action "cancelForm"}}>Cancel</a>
+{{/with}}

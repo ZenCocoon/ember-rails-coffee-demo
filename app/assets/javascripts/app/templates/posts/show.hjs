@@ -1,0 +1,11 @@
+<td>{{post.id}}</td>
+{{#if isEditing}}
+  <td colspan="3">{{view App.EditPostView}}</td>
+{{else}}
+  <td class="data">{{post.title}}</td>
+  <td class="data">{{post.body}}</td>
+  <td class="actions">
+    <a href="#" {{action "showEdit"}}>Edit</a>
+    <a href="#" {{action "destroyRecord"}}>Remove</a>
+  </td>
+{{/if}}
